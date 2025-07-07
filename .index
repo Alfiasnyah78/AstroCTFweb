@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASTRO CTF</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Press Start 2P', cursive;
+    }
+    .crt-glow {
+      text-shadow:
+        0 0 1px #fff,
+        0 0 4px #0ff,
+        0 0 10px #0ff,
+        0 0 20px #0ff;
+    }
+    .scanlines {
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.03) 0px,
+        rgba(0, 0, 0, 0.03) 1px,
+        transparent 1px,
+        transparent 2px
+      );
+    }
+  </style>
+</head>
+<body class="relative min-h-screen w-screen bg-black text-white overflow-x-hidden">
+
+  <!-- Background -->
+  <img src="https://i.pinimg.com/736x/79/81/19/79811983042bb8328e0e3ce01d7b50c4.jpg" alt="TV CRT" class="fixed w-full h-full object-cover opacity-35 brightness-[1.3] contrast-[1.2] z-0" />
+  <div class="fixed w-full h-full scanlines z-0 pointer-events-none"></div>
+
+  <!-- Konten -->
+  <div class="relative z-10 max-w-3xl mx-auto px-4 py-10 text-center">
+
+    <!-- Judul -->
+    <h1 class="text-2xl sm:text-3xl md:text-4xl mb-4 crt-glow">🚀 ASTRO CTF 2025</h1>
+    <p class="text-lime-300 text-sm sm:text-base mb-8 crt-glow">Lomba CTF untuk SMK & Mahasiswa</p>
+    
+     <!-- LOGO -->
+        <div class="flex gap-4 mb-6 justify-center">
+          <img src="astro.jpg" alt="Logo SMK" class="h-12 object-contain" />
+          <img src="nfscc.png" alt="Logo Mahasiswa" class="h-12 object-contain" />
+        </div>
+
+    <!-- Tombol daftar -->
+    <a href="https://link-daftar-astroctf.com"
+       class="mb-10 inline-block px-6 py-3 border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black text-xs sm:text-sm transition duration-200">
+      ▶ DAFTAR LOMBA ASTRO CTF
+    </a>
+
+    <!-- Timeline -->
+    <div class="border-l-4 border-green-500 pl-6 space-y-10 text-left">
+
+      <div class="relative">
+        <div class="absolute -left-8 top-1 w-4 h-4 bg-green-500 rounded-full shadow-lg"></div>
+        <h3 class="text-green-400 text-sm">📅 Batch 1 Pendaftaran</h3>
+        <p class="text-white text-xs mt-1">01 September - 01 Oktober 2025</p>
+      </div>
+
+      <div class="relative">
+        <div class="absolute -left-8 top-1 w-4 h-4 bg-green-400 rounded-full shadow-lg"></div>
+        <h3 class="text-green-300 text-sm">📅 Batch 2 Pendaftaran</h3>
+        <p class="text-white text-xs mt-1">02 Oktober - 01 November 2025</p>
+      </div>
+
+      <div class="relative">
+        <div class="absolute -left-8 top-1 w-4 h-4 bg-yellow-300 rounded-full shadow-lg"></div>
+        <h3 class="text-yellow-300 text-sm">🚀 Opening ASTRO</h3>
+        <p class="text-white text-xs mt-1">02 November 2025</p>
+      </div>
+
+      <div class="relative">
+        <div class="absolute -left-8 top-1 w-4 h-4 bg-blue-400 rounded-full shadow-lg"></div>
+        <h3 class="text-blue-300 text-sm">💻 Webinar CTF Intro</h3>
+        <p class="text-white text-xs mt-1">20 September 2025 (Online)</p>
+      </div>
+
+      <div class="relative">
+        <div class="absolute -left-8 top-1 w-4 h-4 bg-purple-400 rounded-full shadow-lg"></div>
+        <h3 class="text-purple-300 text-sm">📍 Seminar Next CTF</h3>
+        <p class="text-white text-xs mt-1">26 Oktober 2025 (Offline)</p>
+      </div>
+
+      <div class="relative">
+        <div class="absolute -left-8 top-1 w-4 h-4 bg-pink-400 rounded-full shadow-lg"></div>
+        <h3 class="text-pink-300 text-sm">🛠️ TM Babak Penyisihan</h3>
+        <p class="text-white text-xs mt-1">November 2025 (Tunggu kalender akademik)</p>
+      </div>
+
+      <div class="relative">
+        <div class="absolute -left-8 top-1 w-4 h-4 bg-pink-300 rounded-full shadow-lg"></div>
+        <h3 class="text-pink-200 text-sm">🧩 Babak Penyisihan</h3>
+        <p class="text-white text-xs mt-1">November 2025 (Tunggu kalender akademik)</p>
+      </div>
+
+      <div class="relative">
+        <div class="absolute -left-8 top-1 w-4 h-4 bg-orange-400 rounded-full shadow-lg"></div>
+        <h3 class="text-orange-300 text-sm">📢 Pengumuman Finalis</h3>
+        <p class="text-white text-xs mt-1">November 2025 (Tunggu kalender akademik)</p>
+      </div>
+
+      <div class="relative">
+        <div class="absolute -left-8 top-1 w-4 h-4 bg-cyan-300 rounded-full shadow-lg"></div>
+        <h3 class="text-cyan-200 text-sm">🛠️ TM Finalis</h3>
+        <p class="text-white text-xs mt-1">Desember 2025 (Tunggu kalender akademik)</p>
+      </div>
+
+      <div class="relative">
+        <div class="absolute -left-8 top-1 w-4 h-4 bg-red-400 rounded-full shadow-lg"></div>
+        <h3 class="text-red-300 text-sm">🔥 Babak Final</h3>
+        <p class="text-white text-xs mt-1">Desember 2025 (Tunggu kalender akademik)</p>
+      </div>
+
+      <div class="relative">
+        <div class="absolute -left-8 top-1 w-4 h-4 bg-yellow-400 rounded-full shadow-lg"></div>
+        <h3 class="text-yellow-300 text-sm">🏆 Pengumuman Juara</h3>
+        <p class="text-white text-xs mt-1">Desember 2025 (Bersamaan dengan Main Event)</p>
+      </div>
+
+    </div>
+
+    <!-- Biaya Registrasi -->
+    <div class="mt-12 text-left border-t border-white pt-6">
+      <h3 class="text-white text-sm mb-2">💰 Biaya Registrasi:</h3>
+      <ul class="text-xs space-y-1">
+        <li class="text-green-300">Batch 1: Rp15.000</li>
+        <li class="text-pink-300">Batch 2: Rp30.000</li>
+      </ul>
+    </div>
+
+    <!-- Hadiah Juara -->
+    <div class="mt-12 text-right border-t border-white pt-6">
+	   <h3 class="text-white text-sm mb-2"> 🏆 Hadiah Sang Juara: </h3>
+           <ul class="text-xs space-y-1 crt-glow">
+	    <li class="text-orange-300"> Juara 1 Tingkat SMA/SMK/Sdrajat: Rp1.200.000</li>
+	    <li class="text-pink-400"> Juara 2 Tingkat SMA/SMK/Sdrajat: Rp.800.000</li>
+	    <li class"text-red-600"> Juara 3 Tingkat SMA/SMK/Sdrajat: Rp.500.000</li>
+	    <li class="text-green-500">Juara 1 Tingkat Mahasiswa NF: Rp. 1.200.000</li>
+	    <li class="text-indigo-600">Juara 2 Tingkat Mahasiswa NF: Rp. 800.000</li>
+	    <li class="text-purple-600">Juara 3 Tingkat Mahasiswa NF: Rp. 500.000</li>
+           </ul>
+      </div>
+
+        <!-- Tombol -->
+    <div class="space-y-4">
+	    <div> </br>
+              <p class="text-pink-300 text-xs mb-1">🔐 Menuju CTF untuk SMK/SMA Sdrajat</p> </br>
+        <a href="https://smk.nfsccxastro.my.id" class="px-4 py-2 border-2 border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-black transition duration-200">▶ CTF SMK</a>
+      </div>
+      <div>
+              <p class="text-yellow-300 text-xs mb-1">🎓 Menuju CTF untuk Mahasiswa Nurul Fikri</p> </br>
+        <a href="https://nf.nfsccxastro.my.id" class="px-4 py-2 border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black transition duration-200">▶ CTF Mahasiswa</a>
+      </div>
+  </div>
+</body>
+</html>
+

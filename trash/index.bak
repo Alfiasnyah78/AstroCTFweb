@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>8-Bit Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Press Start 2P', cursive;
+      background-color: #1e1e1e;
+      color: #fff;
+      image-rendering: pixelated;
+      overflow-x: hidden;
+    }
+
+    body {
+      background-image: url('https://i.pinimg.com/736x/9c/13/d0/9c13d0ddb7a29c2fe474e8ce9a17a3fe.jpg'); /* pixel tile background */
+      background-repeat: repeat;
+    }
+
+    .frame {
+      border: 8px solid #f0f000;
+      margin: 2vw;
+      padding: 2rem;
+      background-color: #000;
+      box-shadow: 8px 8px 0px #444;
+    }
+
+    .hero {
+      text-align: center;
+    }
+
+    .logos {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 1rem 0;
+      flex-wrap: wrap;
+    }
+
+    .logos img {
+      width: 80px;
+      height: 80px;
+      image-rendering: pixelated;
+      border: 4px solid #ffcc00;
+      background-color: #222;
+      padding: 4px;
+    }
+
+    h1 {
+      font-size: 1rem;
+      color: #00ffff;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px #000;
+    }
+
+    p {
+      font-size: 0.6rem;
+      color: #fff;
+      margin-bottom: 1.5rem;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    @media(min-width: 600px) {
+      .buttons {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+    .btn {
+      background-color: #ff004d;
+      color: white;
+      padding: 0.8rem 1.2rem;
+      border: 4px solid #fff;
+      font-size: 0.6rem;
+      text-decoration: none;
+      box-shadow: 4px 4px #000;
+      transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: #ff77a8;
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px #000;
+    }
+
+    .btn.secondary {
+      background-color: #00eaff;
+      color: #000;
+    }
+
+    .btn.secondary:hover {
+      background-color: #2effff;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="stars"></canvas>
+
+  <div class="frame">
+    <div class="hero">
+      <div class="logos">
+        <img src="https://i.imgur.com/JP5dq6b.png" alt="Logo 1" />
+        <img src="https://i.imgur.com/LJgHp1k.png" alt="Logo 2" />
+      </div>
+      <h1>▶ WELCOME TO 8-BIT ZONE ◀</h1>
+      <p>Website ini penuh nostalgia pixel retro klasik!</p>
+      <div class="buttons">
+        <a href="https://link1.com" class="btn">Start Game</a>
+        <a href="https://link2.com" class="btn secondary">Options</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('stars');
+    const ctx = canvas.getContext('2d');
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+
+    const particles = Array.from({ length: 80 }, () => ({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      size: Math.random() * 1.5 + 1,
+      speed: Math.random() * 1 + 0.5,
+      blink: Math.random()
+    }));
+
+    function draw() {
+      ctx.clearRect(0, 0, width, height);
+      particles.forEach(p => {
+        ctx.beginPath();
+        ctx.fillStyle = 'white';
+        ctx.fillRect(p.x, p.y, p.size, p.size);
+        p.y += p.speed;
+        p.blink += 0.05;
+        if (p.y > height) {
+          p.y = -10;
+          p.x = Math.random() * width;
+        }
+      });
+      requestAnimationFrame(draw);
+    }
+
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    });
+
+    draw();
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>8-Bit TV Retro Cerah</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Press Start 2P', cursive;
+    }
+
+    .crt-glow {
+      text-shadow:
+        0 0 1px #fff,
+        0 0 4px #0ff,
+        0 0 10px #0ff,
+        0 0 20px #0ff;
+    }
+
+    .scanlines {
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.03) 0px,
+        rgba(0, 0, 0, 0.03) 1px,
+        transparent 1px,
+        transparent 2px
+      );
+    }
+  </style>
+</head>
+<body class="relative w-screen h-screen overflow-hidden bg-black flex items-center justify-center">
+
+  <!-- Background CRT Image (gelap sedikit) -->
+  <img src="https://i.pinimg.com/736x/79/81/19/79811983042bb8328e0e3ce01d7b50c4.jpg" alt="TV CRT" class="absolute w-full h-screen object-cover opacity-45 brightness-[1.3] contrast-[1.1]" />
+
+  <!-- Scanline effect (halus) -->
+  <div class="absolute w-full h-full scanlines pointer-events-none"></div>
+
+  <!-- Konten di layar -->
+  <div class="z-10 relative flex flex-col items-center justify-center text-center px-4">
+    <h1 class="text-white text-2xl mb-2 crt-glow">▶ WELCOME TO THE RETRO</h1>
+    <p class="text-lime-300 text-sm mb-6 crt-glow">Website vibes televisi tabung 8-bit, sekarang lebih fokus!</p>
+     <!-- LOGO -->
+        <div class="flex gap-4 mb-6">
+          <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3amxscDMxY2YzOTBudHJseXo3YzQ1eTJwOHp4czlxdHMxYWNkc3d1bSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/TOWeGr70V2R1K/giphy.gif" alt="Logo SMK" class="h-12 object-contain" />
+          <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3dHZsMndvMDJ3d3JvOG5ycm51cjBremhsem92bHluNzc4dms5NmF2ZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/xT8qB2HYA1vVSxooSY/giphy.gif" alt="Logo Mahasiswa" class="h-12 object-contain" />
+        </div>
+    <!-- Tombol -->
+    <div class="space-y-4">
+      <div>
+	      <p class="text-pink-300 text-xs mb-1">🔐 Menuju CTF untuk SMK/SMA Sdrajat</p> </br>
+        <a href="https://smk.kelasdevops.my.id" class="px-4 py-2 border-2 border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-black transition duration-200">▶ CTF SMK</a>
+      </div>
+      <div>
+	      <p class="text-yellow-300 text-xs mb-1">🎓 Menuju CTF untuk Mahasiswa Nurul Fikri</p> </br>
+        <a href="https://ctf.kelasdevops.my.id" class="px-4 py-2 border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black transition duration-200">▶ CTF Mahasiswa</a>
+      </div>
+    </div> </br>
+    <!-- Timeline -->
+    <div class="border-l-4 border-green-500 pl-6 relative space-y-10 text-left">
+      <!-- Step 1 -->
+      <div class="relative">
+        <div class="absolute -left-8 top-1 w-4 h-4 bg-green-500 rounded-full shadow-lg"></div>
+        <h3 class="text-green-400 text-sm">🟢 01 - Pendaftaran Dibuka</h3>
+        <p class="text-white text-xs mt-1">Mulai tanggal 10 Juli 2025 - 25 Juli 2025</p>
+      </div>
+      <!-- Step 2 -->
+      <div class="relative">
+        <div class="absolute -left-8 top-1 w-4 h-4 bg-blue-400 rounded-full shadow-lg"></div>
+        <h3 class="text-blue-300 text-sm">🔵 02 - Babak Penyisihan</h3>
+        <p class="text-white text-xs mt-1">Tanggal 27 Juli 2025 (Online)</p>
+      </div>
+      <!-- Step 3 -->
+      <div class="relative">
+        <div class="absolute -left-8 top-1 w-4 h-4 bg-yellow-400 rounded-full shadow-lg"></div>
+        <h3 class="text-yellow-300 text-sm">🟡 03 - Pengumuman Finalis</h3>
+        <p class="text-white text-xs mt-1">Tanggal 29 Juli 2025</p>
+      </div>
+      <!-- Step 4 -->
+      <div class="relative">
+        <div class="absolute -left-8 top-1 w-4 h-4 bg-pink-400 rounded-full shadow-lg"></div>
+        <h3 class="text-pink-300 text-sm">🔴 04 - Final CTF</h3>
+        <p class="text-white text-xs mt-1">Tanggal 3 Agustus 2025 (Onsite)</p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
+

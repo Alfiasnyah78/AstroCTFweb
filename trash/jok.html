@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8-Bit Arcade</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Press Start 2P', cursive;
+        background-color: black;
+        overflow: hidden;
+      }
+
+      .screen::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      .screen::-webkit-scrollbar-thumb {
+        background: #0f0;
+      }
+
+      .crt-glow {
+        text-shadow:
+          0 0 2px #fff,
+          0 0 5px #0ff,
+          0 0 10px #0ff,
+          0 0 20px #0ff;
+      }
+    </style>
+  </head>
+  <body class="w-screen h-screen overflow-hidden flex items-center justify-center">
+    <div class="relative w-full h-full flex items-center justify-center">
+      <img src="https://i.pinimg.com/736x/79/81/19/79811983042bb8328e0e3ce01d7b50c4.jpg" class="h-full object-contain" alt="Arcade Machine" />
+      
+      <!-- Layar Arcade -->
+      <div class="screen absolute bg-black bg-opacity-80 backdrop-blur-sm border-4 border-lime-400 p-4 overflow-y-scroll text-xs leading-relaxed
+                  top-[26%] left-[24.5%] w-[51%] h-[42%] z-10 text-green-400 shadow-[0_0_20px_#0f0] flex flex-col items-center">
+        
+        <h1 class="text-green-400 mb-3 crt-glow">▶ LET'S PLAY A GAME</h1>
+        <p class="text-lime-300 text-center mb-4">Selamat datang di arena CTF versi 8-bit retro!</p>
+        
+        <!-- LOGO -->
+        <div class="flex gap-4 mb-6">
+          <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3amxscDMxY2YzOTBudHJseXo3YzQ1eTJwOHp4czlxdHMxYWNkc3d1bSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/TOWeGr70V2R1K/giphy.gif" alt="Logo SMK" class="h-12 object-contain" />
+          <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3dHZsMndvMDJ3d3JvOG5ycm51cjBremhsem92bHluNzc4dms5NmF2ZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/xT8qB2HYA1vVSxooSY/giphy.gif" alt="Logo Mahasiswa" class="h-12 object-contain" />
+        </div>
+
+        <!-- BUTTON 1: CTF SMK -->
+        <div class="text-center mb-4">
+          <p class="text-pink-300 mb-2">🔐 Menuju ke kompetisi CTF tingkat SMK</p>
+          <a href="https://link-ke-ctf-smk.com" 
+             class="border-2 border-pink-500 text-pink-500 px-4 py-2 hover:bg-pink-500 hover:text-black transition duration-150 inline-block">
+            ▶ CTF SMK
+          </a>
+        </div>
+
+        <!-- BUTTON 2: CTF Mahasiswa -->
+        <div class="text-center mt-4">
+          <p class="text-yellow-300 mb-2">🎓 Menuju ke kompetisi CTF tingkat Mahasiswa</p>
+          <a href="https://link-ke-ctf-mahasiswa.com" 
+             class="border-2 border-yellow-300 text-yellow-300 px-4 py-2 hover:bg-yellow-300 hover:text-black transition duration-150 inline-block">
+            ▶ CTF Mahasiswa
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
